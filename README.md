@@ -14,6 +14,8 @@ _Any board with thread module enabled can use this module like esp32_
 - [ ] Service Generator to create various Services
 
 ## Examples
+First launch rosbridge `roslaunch rosbridge_server rosbridge_tcp.launch 
+ `
 1. Publish a Ros msg
 ```python3
 from uros import *
