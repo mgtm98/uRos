@@ -3,9 +3,7 @@ import socket
 import json
 if platform == "esp32":
     import ujson as json
-    from machine import Timer
     import _thread as threading
-    import time
 else :
     import json
     import threading
