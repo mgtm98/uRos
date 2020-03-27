@@ -191,6 +191,18 @@ class Ros :
         data_str = json.dumps(data)
         self.socket.send(data_str.encode())
 
+    def unsubscribe(self, topic_name:str):
+        '''
+        Unsubscribe a Ros topic
+        :param topic_name: topic name to subscribe to
+        '''
+        data = {
+            "op" : "unsubscribe",
+            "topic" : topic_name,
+        }
+        data_str = json.dumps(data)
+        self.socket.send(data_str.encode())
+
     def registerMassege(self, *messageClassVector):
         '''
         Registers a Ros Message type
