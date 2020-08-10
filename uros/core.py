@@ -155,7 +155,7 @@ class Ros :
         :param topic_name: topic name to publish
         :param msg: ros message to advertise
         '''
-        if not(msg.__class__.__base__  == Msg_I):
+        if not(issubclass(msg.__class__, Msg_I)):
             raise Exception("Msg class "+str(msg.__class__)+" is not a sub class of "+str(Msg_I))
         if topic_name not in self.topic_advertised:
             self.__advertiseTopic(topic_name, msg.__class__)
